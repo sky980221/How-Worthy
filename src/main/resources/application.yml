@@ -8,6 +8,11 @@ spring:
       url:
         auth: https://nid.naver.com
         api: https://openapi.naver.com
+  datasource:
+    url: jdbc:mysql://database-1.cpcxd7mp89op.ap-northeast-2.rds.amazonaws.com:3306/How_Worthy_DB?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false
+    username: dori
+    password: howworthy
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
@@ -15,7 +20,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
+        dialect: org.hibernate.dialect.MySQLDialect
 logging:
   level:
     org.hibernate.SQL : debug
